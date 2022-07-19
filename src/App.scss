@@ -17,6 +17,9 @@ $lg-width: 990px;
         @content;
     }
 }
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 summary {
   text-transform: uppercase;
   letter-spacing: 2.5px;
