@@ -409,7 +409,7 @@ function App() {
               <div className="footer__content-left">
                 <div className="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet">
                   <footer-accordion className="accordion footer-block grid__item">
-                    <details open={true}>
+                    <div className='footer-details'>
                       <summary tabIndex="-1">
                         <h2 className="h4 accordion__title"></h2>
                       </summary>
@@ -419,10 +419,10 @@ function App() {
                         </a>
                         <p className="caption-large"></p>
                       </div>
-                    </details>
+                    </div>
                   </footer-accordion>
                   <footer-accordion className="accordion footer-block grid__item footer-block--menu">
-                    <details open={true}>
+                    <div className='footer-details'>
                       <summary tabIndex="-1">
                         <h2 className="h4 accordion__title">Our Company</h2>
                       </summary>
@@ -448,10 +448,10 @@ function App() {
                           </a>
                         </li>
                       </ul>
-                    </details>
+                    </div>
                   </footer-accordion>
                   <footer-accordion className="accordion footer-block grid__item footer-block--menu">
-                    <details open={true}>
+                    <div className='footer-details'>
                       <summary tabIndex="-1">
                         <h2 className="h4 accordion__title">Our Policies</h2>
                       </summary>
@@ -477,7 +477,7 @@ function App() {
                           </a>
                         </li>
                       </ul>
-                    </details>
+                    </div>
                   </footer-accordion>
                 </div>
               </div>
@@ -488,7 +488,7 @@ function App() {
                   </div>
                   <div className="grid__item">
                     <footer-accordion className="accordion footer-block--social">
-                      <details open={true}>
+                      <div className='footer-details'>
                         <summary tabIndex="-1">
                           <h2 className="h4 accordion__title">Follow Us</h2>
                         </summary>
@@ -532,7 +532,7 @@ function App() {
                             </li>
                           </ul>
                         </div>
-                      </details>
+                      </div>
                     </footer-accordion>
                   </div>
                 </div>
