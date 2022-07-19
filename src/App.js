@@ -46,23 +46,6 @@ function App() {
     }
     setVideoFlag(!videoFlag);
   }
-
-  useEffect(() => {
-    var details = document.querySelectorAll("details")
-
-    details.forEach(detail => {
-      detail.addEventListener("toggle", function(event) {
-        let childDiv = detail.getElementsByTagName('div')[0];
-        childDiv.classList.remove('hello');
-        if (detail.hasAttribute('open')) {
-          childDiv.classList.add('hello');
-          childDiv.style.opacity="1.0";
-        } else {
-          childDiv.style.opacity="0.0";
-        }
-      })
-    });
-  }, []);
   
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);

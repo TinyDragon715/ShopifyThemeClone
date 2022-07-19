@@ -293,7 +293,7 @@ summary {
       padding-top: 0px;
       padding-bottom: 24px;
     }
-    details {
+    .section2-details {
       margin-top: 20px;
       border-bottom: 1px solid #222;
       padding-bottom: 10px;
@@ -301,13 +301,15 @@ summary {
         outline: 0;
         box-shadow: none;
       }
-      
+      &>div {
+        display: none;
+      }
     }
-    details summary~* {
+    .section2-details summary~* {
       margin-top: 10px;
       margin-bottom: 40px;
     }
-    details .typeset.hello {
+    .section2-details .typeset.hello {
       animation: sweep 1s ease;
     }
     @keyframes sweep {
@@ -344,7 +346,12 @@ summary {
         background-color: rgb(200, 200, 200);
       }
     }
-    details[open] summary .icon {
+    .section2-details[open] {
+      &>div {
+        display: block;
+      }
+    }
+    .section2-details[open] summary .icon {
       box-shadow: none;
       color: black;
       background-color: rgb(250, 250, 250);
@@ -374,10 +381,10 @@ summary {
         font-size: 16px;
       }
     }
-    details>* {
+    .section2-details>* {
       box-sizing: border-box;
     }
-    details:not([open]) summary:hover .icon {
+    .section2-details:not([open]) summary:hover .icon {
       transform: rotate(90deg);
     }
   }

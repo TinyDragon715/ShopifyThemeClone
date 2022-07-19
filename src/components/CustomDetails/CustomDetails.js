@@ -4,24 +4,36 @@ export default function CustomDetails(props) {
     const [detailsFlag, setDetailsFlag] = useState(props.open ? true : false);
 
     const detailsClick = (event) => {
-        // setDetailsFlag(!detailsFlag);
-        // let childDiv = event.target.parentNode.parentNode.parentNode.querySelector('.typeset');
-        // childDiv.classList.remove('hello');
-        // if (!detailsFlag) {
-        //     childDiv.classList.add('hello');
-        //     childDiv.style.opacity="1.0";
-        // } else {
-        //     childDiv.style.opacity="0.0";
-        // }
+        let currentDiv, childDiv;
+        if (event.target.classList.contains('icon')) {
+            currentDiv = event.target.parentNode.parentNode.parentNode;
+        } else {
+            currentDiv = event.target.parentNode.parentNode;
+        }
+
+        if (currentDiv.getAttribute('open') != null) {
+            currentDiv.removeAttribute('open')
+        } else {
+            currentDiv.setAttribute('open', '')
+        }
+        
+        setDetailsFlag(!detailsFlag);
+        childDiv = currentDiv.querySelector('.typeset');
+        childDiv.classList.remove('hello');
+        if (!detailsFlag) {
+            childDiv.classList.add('hello');
+            childDiv.style.opacity="1.0";
+        } else {
+            childDiv.style.opacity="0.0";
+        }
     }
 
     return (
-        <details
+        <div
             className="section2-details"
-            onClick={detailsClick}
             open={props.open}
         >
-            <summary>
+            <summary onClick={detailsClick}>
                 <span>
                 <span className="icon icon-plus-alt"></span>
                 {props.title}
@@ -33,6 +45,6 @@ export default function CustomDetails(props) {
             >
                 {props.children}
             </div>
-        </details>
+        </div>
     );
 }
