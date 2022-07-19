@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import './App.scss';
+import CustomDetails from './components/CustomDetails/CustomDetails';
 
 import beoplay4 from './assets/images/beoplay-h95-4.png';
 import beoplay5 from './assets/images/beoplay-h95-5.png';
@@ -45,6 +46,23 @@ function App() {
     }
     setVideoFlag(!videoFlag);
   }
+
+  useEffect(() => {
+    var details = document.querySelectorAll("details")
+
+    details.forEach(detail => {
+      detail.addEventListener("toggle", function(event) {
+        let childDiv = detail.getElementsByTagName('div')[0];
+        childDiv.classList.remove('hello');
+        if (detail.hasAttribute('open')) {
+          childDiv.classList.add('hello');
+          childDiv.style.opacity="1.0";
+        } else {
+          childDiv.style.opacity="0.0";
+        }
+      })
+    });
+  }, []);
   
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);
@@ -218,131 +236,91 @@ function App() {
 
         <section className='section2'>
           <p className='rte'>Moving, masterful, mesmerising. Get lost in your music with adjustable noise-cancelling headphones that redefine grab-and-go listening.</p>
-          <details open>
-            <summary>
-              <span>
-                <span className="icon icon-plus-alt"></span>
-                Included in the box
-              </span>
-            </summary>
-            <div className='rte typeset'>
-              <p>Dynasty Headphone</p>
-              <p>Aluminium carrying case</p>
-              <p>USB-A to USB-C cable</p>
-              <p>3.5 mm audio cable</p>
-              <p>Flight adaptor</p>
-              <p>Microfibre cleaning cloth</p>
-              <p>Quick start guide</p>
-              <p>Greeting card</p>
-              <p>Instruction and care card</p>
-            </div>
-          </details>
+          <CustomDetails title="Included in the box" open={true}>
+            <p>Dynasty Headphone</p>
+            <p>Aluminium carrying case</p>
+            <p>USB-A to USB-C cable</p>
+            <p>3.5 mm audio cable</p>
+            <p>Flight adaptor</p>
+            <p>Microfibre cleaning cloth</p>
+            <p>Quick start guide</p>
+            <p>Greeting card</p>
+            <p>Instruction and care card</p>
+          </CustomDetails>
           
-          <details>
-            <summary>
-              <span>
-                <span className="icon icon-plus-alt"></span>
-                Sound
-              </span>
-            </summary>
-            <div className="rte typeset">
-              <p>
-                <strong>Noise Isolation</strong><br />
-                Passive Noise Cancelling<br /><br />
-                <strong>Driver Type</strong><br />
-                Electrodynamic, 5.7 mm diameter<br /><br />
-                <strong>Driver Sensitivity</strong><br />
-                107dB ± 3dB, 1kHz @-3 dBFS (max volume) with Bluetooth playback<br /><br />
-                <strong>Frequency Range</strong><br />
-                20 - 20,000 Hz<br /><br />
-                <strong>Customizable Sound EQ</strong><br />
-                Presets available and fully customisable through the app
-              </p>
-            </div>
-          </details>
+          <CustomDetails title="Sound">
+            <p>
+              <strong>Noise Isolation</strong><br />
+              Passive Noise Cancelling<br /><br />
+              <strong>Driver Type</strong><br />
+              Electrodynamic, 5.7 mm diameter<br /><br />
+              <strong>Driver Sensitivity</strong><br />
+              107dB ± 3dB, 1kHz @-3 dBFS (max volume) with Bluetooth playback<br /><br />
+              <strong>Frequency Range</strong><br />
+              20 - 20,000 Hz<br /><br />
+              <strong>Customizable Sound EQ</strong><br />
+              Presets available and fully customisable through the app
+            </p>
+          </CustomDetails>
           
-          <details>
-            <summary>
-              <span>
-                <span className="icon icon-plus-alt"></span>
-                Design
-              </span>
-            </summary>
-            <div className="rte typeset">
-              <p>
-                <strong>Fit</strong><br />
-                True wireless In-ear<br />
-                Fit for sport<br /><br />
-                <strong>EarGels</strong><br />
-                4 pairs of silicone tips (XS, S,M,L)<br />
-                3 pairs of silicone earfins (S, M, L)<br />
-                Comply™ Foam tips (M size)<br /><br />
-                <strong>Materials</strong><br />
-                Aluminium<br />
-                Polymer<br />
-                Silicon<br /><br />
-                <strong>Dust and Waterproof Rating</strong><br />
-                IP57 rating: fully dust protected and can withstand immersion in water up to 1 meter for up to 30 minutes.<br /><br />
-                <strong>Dimensions (mm)</strong><br />
-                Earphones: 23 W x 25 H x 21 D<br />
-                Charging case: 70.6 W x 33.5 H x 35.6 D<br /><br />
-                <strong>Weight</strong><br />
-                Earphones:<br />
-                Right (Primary): 6.4 g<br />
-                Left (Secondary): 6.4 g<br /><br />
-                Charging case:<br />
-                55 g (without earbuds)
-              </p>
-            </div>
-          </details>
+          <CustomDetails title="Design">
+            <p>
+              <strong>Fit</strong><br />
+              True wireless In-ear<br />
+              Fit for sport<br /><br />
+              <strong>EarGels</strong><br />
+              4 pairs of silicone tips (XS, S,M,L)<br />
+              3 pairs of silicone earfins (S, M, L)<br />
+              Comply™ Foam tips (M size)<br /><br />
+              <strong>Materials</strong><br />
+              Aluminium<br />
+              Polymer<br />
+              Silicon<br /><br />
+              <strong>Dust and Waterproof Rating</strong><br />
+              IP57 rating: fully dust protected and can withstand immersion in water up to 1 meter for up to 30 minutes.<br /><br />
+              <strong>Dimensions (mm)</strong><br />
+              Earphones: 23 W x 25 H x 21 D<br />
+              Charging case: 70.6 W x 33.5 H x 35.6 D<br /><br />
+              <strong>Weight</strong><br />
+              Earphones:<br />
+              Right (Primary): 6.4 g<br />
+              Left (Secondary): 6.4 g<br /><br />
+              Charging case:<br />
+              55 g (without earbuds)
+            </p>
+          </CustomDetails>
 
-          <details>
-            <summary>
-              <span>
-                <span className="icon icon-plus-alt"></span>
-                Battery
-              </span>
-            </summary>
-            <div className="rte typeset">
-              <p>
-                <strong>Battery Life</strong><br />
-                Up to 7 hours<br />
-                Up to 30 hours with charging case at moderate volume<br /><br />
-                <strong>Charging Time</strong><br />
-                Earphones: approx. 2 ½ h<br />
-                Charging Case (USB-C): 2 h<br />
-                Charging Case (Qi Wireless): 2 ½ h<br /><br />
-                Charging for 20 minutes gives approximately 1½ hour playback.<br /><br />
-                <strong>Battery Size</strong><br />
-                Earphones:<br />
-                Right (Primary) 60 mAh<br />
-                Left (Secondary) 60 mAh<br /><br />
-                Charging Case: 450 mAh
-              </p>
-            </div>
-          </details>
+          <CustomDetails title="Battery">
+            <p>
+              <strong>Battery Life</strong><br />
+              Up to 7 hours<br />
+              Up to 30 hours with charging case at moderate volume<br /><br />
+              <strong>Charging Time</strong><br />
+              Earphones: approx. 2 ½ h<br />
+              Charging Case (USB-C): 2 h<br />
+              Charging Case (Qi Wireless): 2 ½ h<br /><br />
+              Charging for 20 minutes gives approximately 1½ hour playback.<br /><br />
+              <strong>Battery Size</strong><br />
+              Earphones:<br />
+              Right (Primary) 60 mAh<br />
+              Left (Secondary) 60 mAh<br /><br />
+              Charging Case: 450 mAh
+            </p>
+          </CustomDetails>
 
-          <details>
-            <summary>
-              <span>
-                <span className="icon icon-plus-alt"></span>
-                Connectivity
-              </span>
-            </summary>
-            <div className="rte typeset">
-              <p>
-                <strong>Bluetooth</strong><br />
-                Bluetooth 5.1<br /><br />
-                <strong>Sound Codecs</strong><br />
-                SBC, AAC codec, Aptx classic<br /><br />
-                <strong>Microphone</strong><br />
-                4 - With beamforming signal processing<br /><br />
-                <strong>Inputs and Outputs</strong><br />
-                1.25 m USB-A to USB-C cable for Charging<br />
-                Qi Wireless Charging
-              </p>
-            </div>
-          </details>
+          <CustomDetails title="Connectivity">
+            <p>
+              <strong>Bluetooth</strong><br />
+              Bluetooth 5.1<br /><br />
+              <strong>Sound Codecs</strong><br />
+              SBC, AAC codec, Aptx classic<br /><br />
+              <strong>Microphone</strong><br />
+              4 - With beamforming signal processing<br /><br />
+              <strong>Inputs and Outputs</strong><br />
+              1.25 m USB-A to USB-C cable for Charging<br />
+              Qi Wireless Charging
+            </p>
+          </CustomDetails>
         </section>
 
         <section className='section3'>
