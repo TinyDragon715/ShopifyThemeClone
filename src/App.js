@@ -169,12 +169,10 @@ function App() {
             <p>Habib Wahid Signature Series</p>
             <p>HW-15 Earbuds</p>
             <p>Secure-fit wireless earbuds</p>
-            <p>BDT 2000</p>
             <div className='price'>
               <bdi>
-                <span className="price__prefix">€</span>
-                899
-                <sup className="price__suffix">,00</sup>
+                <span className="price__prefix">BDT&nbsp;</span>
+                2000
               </bdi>
             </div>
             <button className='buy-btn'>
@@ -387,16 +385,6 @@ function App() {
                           </a>
                         </li>
                         <li>
-                          <a href="/pages/careers" className="link list-menu__item list-menu__item--link">
-                            Careers
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/pages/visit" className="link list-menu__item list-menu__item--link">
-                            Visit Us
-                          </a>
-                        </li>
-                        <li>
                           <a href="/pages/contact" className="link list-menu__item list-menu__item--link">
                             Contact Us
                           </a>
@@ -495,7 +483,7 @@ function App() {
           </div>
           <div className="footer__content-bottom">
             <div className='page-width'>
-              © 2022, Be Yours. All rights reserved.
+              © 2022, Qinetic Merch Ltd. All rights reserved.
             </div>
           </div>
         </div>
