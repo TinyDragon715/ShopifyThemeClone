@@ -166,9 +166,10 @@ function App() {
             </Slider>
           </div>
           <div className='right'>
-            <p>BE YOURS</p>
-            <p>Dynasty Headphone</p>
-            <p>Ultimate over-ear headphones</p>
+            <p>Habib Wahid Signature Series</p>
+            <p>HW-15 Earbuds</p>
+            <p>Secure-fit wireless earbuds</p>
+            <p>BDT 2000</p>
             <div className='price'>
               <bdi>
                 <span className="price__prefix">€</span>
@@ -218,100 +219,67 @@ function App() {
         </section>
 
         <section className='section2'>
-          <p className='rte'>Moving, masterful, mesmerising. Get lost in your music with adjustable noise-cancelling headphones that redefine grab-and-go listening.</p>
+          <p className='rte'>Compact, sleek, mesmerizing. Get lost in your music with in-ear, noise-isolating earbuds that redefine grab-and-go listening with pure bass and music.</p>
           <CustomDetails title="Included in the box" open={true}>
-            <p>Dynasty Headphone</p>
-            <p>Aluminium carrying case</p>
-            <p>USB-A to USB-C cable</p>
-            <p>3.5 mm audio cable</p>
-            <p>Flight adaptor</p>
-            <p>Microfibre cleaning cloth</p>
-            <p>Quick start guide</p>
-            <p>Greeting card</p>
-            <p>Instruction and care card</p>
+            <p>HW-15 Wireless Earphones</p>
+            <p>Magnetic charging case</p>
+            <p>Standard USB-C cable</p>
+            <p>User Manual</p>
           </CustomDetails>
           
           <CustomDetails title="Sound">
             <p>
               <strong>Noise Isolation</strong><br />
-              Passive Noise Cancelling<br /><br />
-              <strong>Driver Type</strong><br />
-              Electrodynamic, 5.7 mm diameter<br /><br />
-              <strong>Driver Sensitivity</strong><br />
-              107dB ± 3dB, 1kHz @-3 dBFS (max volume) with Bluetooth playback<br /><br />
-              <strong>Frequency Range</strong><br />
-              20 - 20,000 Hz<br /><br />
-              <strong>Customizable Sound EQ</strong><br />
-              Presets available and fully customisable through the app
+              Passive Noise Reduction<br />
+              Stereo Sound<br />
+              HD Audio<br />
+              Optimized Volume<br />
+              Gentle touch music control<br />
+              Active “Siri” Voice Assistance
             </p>
           </CustomDetails>
           
           <CustomDetails title="Design">
             <p>
-              <strong>Fit</strong><br />
-              True wireless In-ear<br />
-              Fit for sport<br /><br />
-              <strong>EarGels</strong><br />
-              4 pairs of silicone tips (XS, S,M,L)<br />
-              3 pairs of silicone earfins (S, M, L)<br />
-              Comply™ Foam tips (M size)<br /><br />
+              Wireless fit-ear earbuds<br />
+              3 pairs of silicone tips (S, M, L)<br /><br />
               <strong>Materials</strong><br />
-              Aluminium<br />
+              Aluminum<br />
               Polymer<br />
               Silicon<br /><br />
-              <strong>Dust and Waterproof Rating</strong><br />
-              IP57 rating: fully dust protected and can withstand immersion in water up to 1 meter for up to 30 minutes.<br /><br />
-              <strong>Dimensions (mm)</strong><br />
-              Earphones: 23 W x 25 H x 21 D<br />
-              Charging case: 70.6 W x 33.5 H x 35.6 D<br /><br />
               <strong>Weight</strong><br />
-              Earphones:<br />
-              Right (Primary): 6.4 g<br />
-              Left (Secondary): 6.4 g<br /><br />
+              Earphones: 4.5g each<br />
               Charging case:<br />
-              55 g (without earbuds)
+              105g (without earbuds)
             </p>
           </CustomDetails>
 
           <CustomDetails title="Battery">
             <p>
-              <strong>Battery Life</strong><br />
-              Up to 7 hours<br />
-              Up to 30 hours with charging case at moderate volume<br /><br />
-              <strong>Charging Time</strong><br />
-              Earphones: approx. 2 ½ h<br />
-              Charging Case (USB-C): 2 h<br />
-              Charging Case (Qi Wireless): 2 ½ h<br /><br />
-              Charging for 20 minutes gives approximately 1½ hour playback.<br /><br />
-              <strong>Battery Size</strong><br />
-              Earphones:<br />
-              Right (Primary) 60 mAh<br />
-              Left (Secondary) 60 mAh<br /><br />
-              Charging Case: 450 mAh
+            <strong>Battery Life</strong><br />
+              Up to 6.5 hours<br />
+              Up to 28 hours with charging case at moderate volume<br /><br />
+              Charging time: 1.2 hours<br /><br />
+              Battery capacity: 40 mAh<br /><br />
+              Charging case battery： 300 mAh
             </p>
           </CustomDetails>
 
           <CustomDetails title="Connectivity">
             <p>
               <strong>Bluetooth</strong><br />
-              Bluetooth 5.1<br /><br />
-              <strong>Sound Codecs</strong><br />
-              SBC, AAC codec, Aptx classic<br /><br />
-              <strong>Microphone</strong><br />
-              4 - With beamforming signal processing<br /><br />
+              Bluetooth V5.1<br /><br />
               <strong>Inputs and Outputs</strong><br />
-              1.25 m USB-A to USB-C cable for Charging<br />
-              Qi Wireless Charging
+              USB-A to USB-C cable for Charging
             </p>
           </CustomDetails>
         </section>
 
         <section className='section3'>
         <div className='title'>
-          <h1>Like nothing you've heard before.</h1>
+          <h1>Not Every Earbuds Know Your Ears.</h1>
           <p>
-            Depth, detail and delight. Dialed up beyond expectation. This is, quite<br className='mb-hide' />
-            simply, our finest headphone experience
+            HW-15 with its unique lock structure designed headphones give you a listening experience that is dialed up beyond expectation.
           </p>
         </div>
         <div className='content'>
@@ -320,29 +288,21 @@ function App() {
               <li className='list-hide list-hide1 active' onMouseEnter={() => mouseHover(1)}>Crafted for the senses</li>
               <li className='list-hide list-hide2' onMouseEnter={() => mouseHover(2)}>Less effort. More emotion.</li>
               <li className='list-hide list-hide3' onMouseEnter={() => mouseHover(3)}>Almost-unreal comfort</li>
-              <li className='list-hide list-hide4' onMouseEnter={() => mouseHover(4)}>Standout accessories, made to fit in</li>
-              <li className='list-hide list-hide5' onMouseEnter={() => mouseHover(5)}>Fidelity that flexes</li>
-              <li className='list-hide list-hide6' onMouseEnter={() => mouseHover(6)}>Music at your fingertips</li>
+              <li className='list-hide list-hide4' onMouseEnter={() => mouseHover(4)}>Experience music at its finest</li>
             </ul>
 
             <div className='page-width'>
               <div className="hover-hide hover-hide1">
-                You can see it in the soft lambskin leather, picked and stitched with exacting attention to detail. You can feel it in the precision-cut aluminium frame that's robust yet beautiful. Even the carry case tells the story. Timeless design, made to last for generations.
+                The flexible fit-ear design conforms to your ear to comfortably lock in place so you can experience powerful, balanced sound during your work day or your workouts.
               </div>
               <div className='hover-hide hover-hide2' style={{ display: 'none' }}>
-                Quick set up, intuitive user controls and Bluetooth 5.1 allow you to connect easily to the devices you already love. And if you want to make a few sounds of your own, four microphones keep your voice crystal clear on calls.
+                With HW-15’s gentle touch controls and quick Bluetooth connectivity, a listener’s experience can only get better.
               </div>
               <div className='hover-hide hover-hide3' style={{ display: 'none' }}>
-                So comfortable, it's like you're not wearing them at all. Oval memory foam cushions, soft top grain lambskin and a superior fit invite you to play all day.
+                So comfortable, it's like you're not wearing them at all.
               </div>
               <div className='hover-hide hover-hide4' style={{ display: 'none' }}>
-                Dynasty Headphone’s finishing touches are made to be touched, with matching aluminium details and woven fabric encasing the audio cable, charging cable and flight adapter.
-              </div>
-              <div className='hover-hide hover-hide5' style={{ display: 'none' }}>
-                For the rare moments you'll take them off, Dynasty Headphone can be folded and placed into the custom hardcase, which is lined with a super soft textile finish. No matter how much you move, they'll be safe and sound.
-              </div>
-              <div className='hover-hide hover-hide6' style={{ display: 'none' }}>
-                More bass, more warmth, more you. Personalise your listening experience with the app. The equalizer and noise cancellation adjusters give you complete control over how you listen, with just a tap.
+                The earbuds come with Passive Noise Reduction qualities that give the listeners a crystal clear listening experience, even in a noisy environment.
               </div>
             </div>
           </div>
@@ -358,12 +318,6 @@ function App() {
             </div>
             <div className='tab-collage__card hover-hide hover-hide4' style={{ display: 'none' }}>
               <img className='media-image' src={beoplay7}></img>
-            </div>
-            <div className='tab-collage__card hover-hide hover-hide5' style={{ display: 'none' }}>
-              <img className='media-image' src={beoplay9}></img>
-            </div>
-            <div className='tab-collage__card hover-hide hover-hide6' style={{ display: 'none' }}>
-              <img className='media-image' src={beoplay10}></img>
             </div>
           </div>
         </div>
